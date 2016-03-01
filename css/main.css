@@ -400,10 +400,22 @@ body {
   font-weight: 400;
   text-align: center;
   color: #FFF;
+  transition: all .5s ease-in;
+}
+
+body.video--playing {
+  color: black;
+  background-color: black;
+}
+
+body.video--playing h1, body.video--playing a {
+  color: black;
 }
 
 .wrapper {
   padding: 0 1em;
+  max-width: 35em;
+  margin: 0 auto;
 }
 
 h1 {
@@ -411,7 +423,6 @@ h1 {
 }
 
 p {
-  max-width: 31.25em;
   letter-spacing: 1.3px;
   font-size: 0.9em;
 }
@@ -421,4 +432,28 @@ a {
   margin: 1em 0;
   color: #DC494E;
   text-decoration: none;
+}
+
+.video__container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 255, 0.4);
+  display: flex;
+  justify-content: center;
+}
+
+.video__wrapper {
+  position: relative;
+}
+
+.video--close {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  right: 0;
+  padding: 0.8em 1.3em;
+  margin: 0;
 }
