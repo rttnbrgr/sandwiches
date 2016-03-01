@@ -1,0 +1,44 @@
+@import 'normalize';
+
+// colors
+$primary: 	#002550;
+$secondary: #DC494E;
+$tertiary: 	#FFF;
+
+$theme--bg: 			$primary;
+$theme--header: 	$secondary;
+$theme--links: 	$secondary;
+$theme--text: 		$tertiary;
+
+body {
+	background-color: $theme--bg;
+	// type
+	font-family: "cooper-black-std",sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	text-align: center;
+	color: $theme--text;
+}
+
+.wrapper {
+	padding: 0 1em;
+
+}
+
+h1 {
+	color: $theme--header;
+}
+
+p {
+	max-width: 31.25em;
+	letter-spacing: 1.3px;
+	font-size: 0.9em;
+}
+
+a {
+	display: block;
+	margin: 1em 0;
+	color: $theme--links;
+	text-decoration: none;
+
+}
