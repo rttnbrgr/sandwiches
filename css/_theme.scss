@@ -1,0 +1,92 @@
+////////////////////////////////////////////////
+// THEME
+////////////////////////////////////////////////
+
+
+// colors
+$primary: 	#002550;
+$secondary: #DC494E;
+$tertiary: 	#FFF;
+
+$theme--bg: 			$primary;
+$theme--header: 	$secondary;
+$theme--links: 	$secondary;
+$theme--text: 		$tertiary;
+
+
+// USA 
+$usa__bg: 				#002550;
+$usa__color: 			#DC494E;
+$usa__text: 			#FFF;
+// RASTA
+$rasta__bg: 			yellow;
+$rasta__color: 		red;
+$rasta__text: 		green;
+// RAINBOW
+$rainbow__bg: 		yellow;
+$rainbow__color: 	red;
+$rainbow__text: 	green;
+$rainbow1: #EE8C98; 
+$rainbow2: #FDEB8F;
+$rainbow3: #7BBBE7;
+$rainbow__grad:	linear-gradient(to right, $rainbow1, $rainbow2, $rainbow3); 
+
+
+$theme1__bg: 			#252839;
+$theme1__color:		#f2b632;
+$theme1__text: 		#b5b5b7;
+
+body[data-theme='usa'] {
+	background-color: $theme--bg;
+	color: $theme--text;
+	h1, a { color: $theme--links; }
+}
+
+
+body[data-theme='rasta'] {
+	background-color: $rasta__bg;
+	color: $rasta__text;
+	h1, a { color: $rasta__color; }
+}
+
+body[data-theme='theme1'] {
+	background-color: $theme1__bg;
+	color: 						$theme1__text;
+	h1, a { color: 		$theme1__color; }
+}
+
+$text-shadow-size: 2px;
+
+body[data-theme='rainbow'] {
+	// h1 { 
+	// 	// color: $rainbow__grad; 
+	// 	margin-left: auto;
+	// 	margin-right: auto;
+
+	// 	background: -webkit-linear-gradient(left, $rainbow1, $rainbow2, $rainbow3);
+	// 	-webkit-background-clip: text;
+	// 	// -webkit-text-fill-color: transparent;
+
+	// 	text-shadow: 
+	// 		-5px -5px 0 $black, 
+	// 		-5px  5px 0 $black, 
+	// 		 5px  5px 0 $black, 
+	// 		 5px -5px 0 $black;
+	// 	// &::after {
+	// 	// 	content: "";
+	// 	// 	background: $rainbow__grad;
+	// 	// 	position: absolute;
+	// 	// 	width: 100%;
+	// 	// 	height: 2em;
+	// 	// }
+	// }
+	background-color: white;
+	color: pink;
+	h1, a { color: blue; }
+}
+
+body[data-blackout='true'], body.blackout {
+	background-color: $black;
+	color: black;
+	h1, a { color: $black; }
+}

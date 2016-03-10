@@ -1,0 +1,61 @@
+////////////////////////////////////////////////
+// VIDEO
+////////////////////////////////////////////////
+
+.video__wrapper {
+	// position: relative;
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+	transition: padding .5s ease-in;
+
+	&.video--hidden {
+		padding: 0;
+
+		.video--close {
+			display: none;
+		}
+
+	}
+}
+
+.video {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.video--close {
+	position: absolute;
+  z-index: 20;
+  top: 0;
+  right: 0;
+  padding: 0.8em 1.3em;
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
