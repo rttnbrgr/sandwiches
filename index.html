@@ -5,17 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1"><script src="https://use.typekit.net/yyi4zol.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+      if (typeof jQuery === 'undefined') {
+        console.log('none');
+        document.write(unescape('%3Cscript%20src%3D%22js/vendor/jquery-2.2.1.min.js%22%3E%3C/script%3E'));
+        console.log('loaded local jquery');
+      }    
+    </script><script src="https://use.typekit.net/yyi4zol.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <link rel="stylesheet" href="css/main.css">
   </head>
-  <body>
-    <div class="wrapper">
+  <body data-theme="theme1">
+    <div class="wrapper">   
       <h1>sandwiches</h1>
       <div class="video__wrapper video--hidden">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/3-Xsh01ICcU?rel=0&amp;amp;controls=0&amp;amp;showinfo=0" frameborder="0" allowfullscreen class="video"></iframe><a href="#" class="video--close">x</a>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/3-Xsh01ICcU?rel=0&amp;amp;controls=0&amp;amp;showinfo=0" frameborder="0" allowfullscreen class="video"></iframe><a href="#" data-toggle="video" class="video--close">x</a>
       </div>
-      <p>Godard four dollar toast gluten-free salvia, gastropub squid disrupt aesthetic keytar roof party food truck. Retro wayfarers kinfolk chia. +1 fashion axe wolf, listicle kickstarter freegan fixie XOXO sartorial ugh pour-over skateboard put a bird on it migas pop-up. Bitters scenester mustache, kitsch squid authentic viral knausgaard brooklyn helvetica meditation butcher. Ugh stumptown celiac small batch, williamsburg keffiyeh kogi lo-fi. Yuccie farm-to-table bitters schlitz, ennui typewriter before they sold out neutra trust fund banjo tofu. Put a bird on it flexitarian seitan, chicharrones literally neutra church-key knausgaard twee gluten-free.</p><a href="https://www.youtube.com/watch?v=qtF5dMzAF2k" class="action--audio">Do you want some sandwiches?</a><a href="https://www.youtube.com/watch?v=3-Xsh01ICcU" class="action--video">Lemme see these sandwiches.</a><a href="http://www.audiomack.com/album/the-hip-hop-head/lnjf-sandwiches" class="action--mixtape">Gimme dem sandwiches!</a>
+      <p>Godard four dollar toast gluten-free salvia, gastropub squid disrupt aesthetic keytar roof party food truck. Retro wayfarers kinfolk chia. +1 fashion axe wolf, listicle kickstarter freegan fixie XOXO sartorial ugh pour-over skateboard put a bird on it migas pop-up. Bitters scenester mustache, kitsch squid authentic viral knausgaard brooklyn helvetica meditation butcher. Ugh stumptown celiac small batch, williamsburg keffiyeh kogi lo-fi. Yuccie farm-to-table bitters schlitz, ennui typewriter before they sold out neutra trust fund banjo tofu. Put a bird on it flexitarian seitan, chicharrones literally neutra church-key knausgaard twee gluten-free.</p><a href="https://www.youtube.com/watch?v=qtF5dMzAF2k" class="action--audio">Do you want some sandwiches?</a><a href="#" data-toggle="video" class="action--video">Lemme see these sandwiches.</a><a href="http://www.audiomack.com/album/the-hip-hop-head/lnjf-sandwiches" class="action--mixtape">Gimme dem sandwiches!</a>
     </div>
   </body>
+  <script src="js/scripts.js"></script>
+  <script src="js/vendor/soundmanager2.js"></script>
+  <script src="js/sounds.js"></script>
 </html>

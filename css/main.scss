@@ -10,6 +10,8 @@ $theme--header: 	$secondary;
 $theme--links: 	$secondary;
 $theme--text: 		$tertiary;
 
+$black: #000;
+
 body {
 	background-color: $theme--bg;
 	// type
@@ -19,6 +21,13 @@ body {
 	text-align: center;
 	color: $theme--text;
 	transition: all .5s ease-in;
+	
+	// empty theme
+	background-color: $black;
+	background-color: #fff;
+	color: $black;
+	h1, a { color: $black; }
+
 
 	&.video--playing {
 
@@ -27,16 +36,24 @@ body {
 
 		h1, a { color: black; }
 	}
+
+	
 }
 
 .wrapper {
 	padding: 0 1em;
 	max-width: 35em;
 	margin: 0 auto;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 h1 {
 	color: $theme--header;
+	text-transform: uppercase;
+	position: relative;
 }
 
 p {
@@ -54,54 +71,34 @@ a {
 
 }
 
-// video stuff
+// VIDEO
+@import 'module-video';
+@import 'theme';
 
-.video__container {
-	position: fixed;
-	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
-	background-color: rgba(0,0, 255, 0.4);
-	display: flex;	
-	justify-content: center;
-}
+// $rasta__bg: yellow;
+// $rasta__color: red;
+// $rasta__text: green;
 
-.video__wrapper {
-	position: relative;
+// body[data-theme='usa'] {
+// 	background-color: $theme--bg;
+// 	color: $theme--text;
+// 	h1, a { color: $theme--links; }
+// }
 
-}
+// body[data-theme='rasta'] {
+// 	background-color: $rasta__bg;
+// 	color: $rasta__text;
+// 	h1, a { color: $rasta__color; }
+// }
 
-.video {
+// body[data-theme='rainbow'] {
+// 	background-color: white;
+// 	color: pink;
+// 	h1, a { color: blue; }
+// }
 
-}
-
-.video--close {
-	position: absolute;
-  z-index: 20;
-  top: 0;
-  right: 0;
-  padding: 0.8em 1.3em;
-  margin: 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// body[data-blackout='true'], body.blackout {
+// 	background-color: $black;
+// 	color: black;
+// 	h1, a { color: $black; }
+// }

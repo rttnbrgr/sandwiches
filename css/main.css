@@ -401,6 +401,13 @@ body {
   text-align: center;
   color: #FFF;
   transition: all .5s ease-in;
+  background-color: #000;
+  background-color: #fff;
+  color: #000;
+}
+
+body h1, body a {
+  color: #000;
 }
 
 body.video--playing {
@@ -416,10 +423,16 @@ body.video--playing h1, body.video--playing a {
   padding: 0 1em;
   max-width: 35em;
   margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 h1 {
   color: #DC494E;
+  text-transform: uppercase;
+  position: relative;
 }
 
 p {
@@ -434,19 +447,31 @@ a {
   text-decoration: none;
 }
 
-.video__container {
-  position: fixed;
+.video__wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  transition: padding .5s ease-in;
+}
+
+.video__wrapper.video--hidden {
+  padding: 0;
+}
+
+.video__wrapper.video--hidden .video--close {
+  display: none;
+}
+
+.video {
+  position: absolute;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 255, 0.4);
-  display: flex;
-  justify-content: center;
-}
-
-.video__wrapper {
-  position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 .video--close {
@@ -456,4 +481,49 @@ a {
   right: 0;
   padding: 0.8em 1.3em;
   margin: 0;
+}
+
+body[data-theme='usa'] {
+  background-color: #002550;
+  color: #FFF;
+}
+
+body[data-theme='usa'] h1, body[data-theme='usa'] a {
+  color: #DC494E;
+}
+
+body[data-theme='rasta'] {
+  background-color: yellow;
+  color: green;
+}
+
+body[data-theme='rasta'] h1, body[data-theme='rasta'] a {
+  color: red;
+}
+
+body[data-theme='theme1'] {
+  background-color: #252839;
+  color: #b5b5b7;
+}
+
+body[data-theme='theme1'] h1, body[data-theme='theme1'] a {
+  color: #f2b632;
+}
+
+body[data-theme='rainbow'] {
+  background-color: white;
+  color: pink;
+}
+
+body[data-theme='rainbow'] h1, body[data-theme='rainbow'] a {
+  color: blue;
+}
+
+body[data-blackout='true'], body.blackout {
+  background-color: #000;
+  color: black;
+}
+
+body[data-blackout='true'] h1, body[data-blackout='true'] a, body.blackout h1, body.blackout a {
+  color: #000;
 }
