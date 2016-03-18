@@ -15,3 +15,9 @@ order of adding new scss files w/ prepros to avoid errors
 [data2](https://hacks.mozilla.org/2012/10/using-data-attributes-in-javascript-and-css/)
 
 http://encosia.com/3-reasons-why-you-should-let-google-host-jquery-for-you/
+
+
+
+## HTML 5 Audio
+http://phoboslab.org/log/2011/03/the-state-of-html5-audio
+https://24ways.org/2010/the-state-of-html5-audio

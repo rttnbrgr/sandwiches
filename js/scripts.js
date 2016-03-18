@@ -105,3 +105,8 @@ function blackOutIf() {
 
 // random();
 
+// test the loop format
+do {
+	console.log('doing');
+} while ( false );
+
