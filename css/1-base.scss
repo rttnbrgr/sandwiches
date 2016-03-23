@@ -1,0 +1,66 @@
+////////////////////////////////////
+// Base & Typography
+////////////////////////////////////
+
+body {
+	background-color: $theme--bg;
+	
+	// type
+	font-family: "cooper-black-std",sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	text-align: center;
+	color: $theme--text;
+	transition: all .5s ease-in;
+	
+	// empty theme
+	background-color: $black;
+	background-color: #fff;
+	color: $black;
+	h1, a { color: $black; }
+
+
+	&.video--playing {
+
+		color: black;
+		background-color: black;
+
+		h1, a { color: black; }
+	}
+
+	
+}
+
+
+h1 {
+	color: $theme--header;
+	text-transform: uppercase;
+	position: relative;
+}
+
+p {
+	// max-width: 31.25em;
+	letter-spacing: 1.3px;
+	font-size: 0.9em;
+
+}
+
+a {
+	display: block;
+	margin: 1em 0;
+	color: $theme--links;
+	text-decoration: none;
+
+}
+
+
+// Grid
+.wrapper {
+	padding: 0 1em;
+	max-width: 35em;
+	margin: 0 auto;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
