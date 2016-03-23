@@ -90,3 +90,26 @@ body[data-blackout='true'], body.blackout {
 	color: black;
 	h1, a { color: $black; }
 }
+
+
+
+
+@mixin theme($color, $bg, $text, $link){
+	background-color: $bg;
+	color: $text;
+	h1, a { color: $color; }
+}
+
+@each $theme in usa, rasta, rainbox {
+  
+  // .#{$animal}-icon {
+  //   background-image: url('/images/#{$animal}.png');
+  // }
+
+  body[data-theme='#{$theme}'] {
+  	// background-color: $#{$theme}__bg;
+  	@include theme( pink, white, pink, white);
+  }
+
+
+}
